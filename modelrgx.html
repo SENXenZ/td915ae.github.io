@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Descargar Producto - Estilo Amazon</title>
+  <style>
+    body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('modelos/fondomodelos.webp') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  backdrop-filter: blur(12px);    /* efecto borroso */
+}
+
+   .container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 30px;
+  display: flex;
+  gap: 30px;
+  background: rgba(0, 0, 0, 0.4); /* fondo oscuro con transparencia */
+  backdrop-filter: blur(12px);    /* efecto borroso */
+  -webkit-backdrop-filter: blur(12px); /* compatibilidad Safari */
+  border-radius: 16px;
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+}
+
+    .left-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .left-panel img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .left-panel img:hover {
+      border-color: #0ff;
+    }
+
+    .main-image {
+      flex: 1;
+      max-width: 500px;
+      height: 400px;
+      object-fit: cover;
+      border-radius: 12px;
+      cursor: pointer;
+      border: 2px solid #0ff;
+    }
+
+    .gallery {
+      display: flex;
+      gap: 15px;
+    }
+
+    .info-panel {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .info-panel h1 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #0ff;
+    }
+
+    .info-panel p {
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .btn-descargar {
+      padding: 14px 26px;
+      background: #0ff;
+      color: #000;
+      font-weight: bold;
+      border-radius: 10px;
+      text-decoration: none;
+      text-align: center;
+      display: inline-block;
+      width: fit-content;
+    }
+
+    .btn-descargar:hover {
+      background: #00bfff;
+    }
+
+    .fullscreen {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100vw; height: 100vh;
+      background: rgba(0,0,0,0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+    }
+
+    .fullscreen img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+    }
+
+    footer {
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      text-align: center;
+      padding: 18px 0;
+      font-size: 0.9rem;
+      color: #88dfff;
+      box-shadow: inset 0 1px 0 #0ff;
+      user-select: none;
+    }
+
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(0, 0, 0, 0.65);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 15px 30px;
+      display: flex;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    }
+
+    header .logo img {
+      height: 50px;
+      width: auto;
+      margin-right: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 35px;
+      flex-grow: 1;
+    }
+
+    nav ul li a {
+      color: #00f0ff;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #0ff;
+    }
+
+    /* TITULO PRINCIPAL */
+    main .title-section {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    main .title-section h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 3.5rem;
+      color: #00f0ff;
+      text-shadow: 0 0 12px #00f0ffcc;
+      margin-bottom: 20px;
+    }
+
+    main .title-section p {
+      font-size: 1.3rem;
+      max-width: 700px;
+      margin: 0 auto;
+      color: #cceeffdd;
+      line-height: 1.5;
+    }
+
+  </style>
+</head>
+<body>
+<div class="blur-bg">
+    <header>
+      <div class="logo">
+        <img src="imagenes/logo.png" alt="Logo Modelaje 3D" />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="modelo.html">Modelos</a></li>
+          <li><a href="mv.html">Mision y vision</a></li>
+          <li><a href="contacto.html">Contacto para Imprimir</a></li>
+        </ul>
+      </nav>
+    </header>
+
+<div class="container">
+  <div class="gallery">
+    <div class="left-panel">
+      <img src="modelos/modelo1/RGX.png" onmouseover="cambiarImagen(this.src)" onclick="abrirImagen(this.src)">
+      <img src="modelos/modelo1/dragon_ring.webp" onmouseover="cambiarImagen(this.src)" onclick="abrirImagen(this.src)">
+      <img src="modelos/modelo1/451695028_1518289542442736_2048741500134397352_n-1.webp" onmouseover="cambiarImagen(this.src)" onclick="abrirImagen(this.src)">
+    </div>
+    <img id="mainImage" class="main-image" src="modelos/modelo1/dragon_ring.webp" onclick="abrirImagen(this.src)">
+  </div>
+
+  <div class="info-panel">
+    <h1>Karambit RGX 3D - Modelo</h1>
+    <p>
+      El modelo 3D del cuchillo RGX de Valorant es una versión simplificada del arma, con un diseño moderno y aerodinámico. Tiene formas anguladas y detalles metálicos, manteniendo la estética futurista del juego, pero sin efectos luminosos ni animaciones complejas. Ideal para visualizaciones básicas o prototipos.
+    </p>
+    <a href="descargas/dragon_ring_3d_pack.zip" class="btn-descargar" download>Descargar Modelo</a>
+  </div>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<footer>
+  &copy; 2025 En tres Dimensiones. Todos los derechos reservados.
+</footer>
+
+<script>
+  function cambiarImagen(src) {
+    document.getElementById('mainImage').src = src;
+  }
+
+  function abrirImagen(src) {
+    const full = document.createElement('div');
+    full.className = 'fullscreen';
+    full.innerHTML = `<img src="${src}" alt="Vista ampliada">`;
+    document.body.appendChild(full);
+
+    full.addEventListener('click', () => full.remove());
+    document.addEventListener('keydown', function escClose(e) {
+      if (e.key === 'Escape') {
+        full.remove();
+        document.removeEventListener('keydown', escClose);
+      }
+    });
+  }
+</script>
+
+</body>
+</html>
