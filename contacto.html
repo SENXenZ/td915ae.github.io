@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,59 +20,9 @@
       min-height: 100vh;
       color: #fff;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      padding: 60px 20px;
-    }
-
-    .container {
-      background: rgba(0, 0, 0, 0.6);
-      backdrop-filter: blur(6px);
-      padding: 50px;
-      border-radius: 20px;
-      max-width: 700px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
-    }
-
-    h1 {
-      font-family: 'Orbitron', sans-serif;
-      font-size: 2.5rem;
-      color: #00fff7;
-      margin-bottom: 30px;
-      text-shadow: 0 0 12px rgba(0,255,255,0.4);
-    }
-
-    .info p {
-      font-size: 1.2rem;
-      margin: 20px 0;
-      color: #e0f7fa;
-    }
-
-    .info a {
-      color: #00eaff;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    .info a:hover {
-      text-decoration: underline;
-    }
-
-    footer {
-      margin-top: 30px;
-      font-size: 0.9rem;
-      color: #aef8ff;
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2rem;
-      }
-      .info p {
-        font-size: 1rem;
-      }
+      padding: 0 20px 60px;
     }
 
     header {
@@ -82,6 +34,8 @@
       padding: 15px 30px;
       display: flex;
       align-items: center;
+      width: 100%;
+      max-width: 1200px;
       z-index: 1000;
       box-shadow: 0 2px 8px rgba(0,0,0,0.6);
     }
@@ -110,7 +64,44 @@
     nav ul li a:hover {
       color: #0ff;
     }
-footer {
+
+    .container {
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(6px);
+      padding: 50px;
+      border-radius: 20px;
+      max-width: 700px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
+      margin-top: 100px;
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      color: #00fff7;
+      margin-bottom: 30px;
+      text-shadow: 0 0 12px rgba(0,255,255,0.4);
+    }
+
+    .info p {
+      font-size: 1.2rem;
+      margin: 20px 0;
+      color: #e0f7fa;
+    }
+
+    .info a {
+      color: #00eaff;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .info a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
       background: rgba(0, 0, 0, 0.5);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
@@ -120,26 +111,45 @@ footer {
       color: #88dfff;
       box-shadow: inset 0 1px 0 #0ff;
       user-select: none;
+      margin-top: 30px;
+      width: 100%;
     }
 
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2rem;
+      }
+      .info p {
+        font-size: 1rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
   </style>
 </head>
 <body>
 
-    <div class="blur-bg">
-    <header>
-      <div class="logo">
-        <img src="imagenes/logo.png" alt="Logo Modelaje 3D" />
-      </div>
-      <nav>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="modelo.html">Modelos</a></li>
-          <li><a href="mv.html">Mision y vision</a></li>
-          <li><a href="contacto.html">Contacto para Imprimir</a></li>
-        </ul>
-      </nav>
-    </header>
+  <header>
+    <div class="logo">
+      <img src="imagenes/logo.png" alt="Logo Modelaje 3D" />
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="modelo.html">Modelos</a></li>
+        <li><a href="mv.html">Misión y Visión</a></li>
+        <li><a href="contacto.html">Contacto para Imprimir</a></li>
+      </ul>
+    </nav>
+  </header>
 
   <div class="container">
     <h1>Contacto para Imprimir</h1>
@@ -153,11 +163,11 @@ footer {
       </p>
       <p><strong>🗂 Puedes enviarnos tu archivo 3D (.stl, .obj, .zip) directamente al correo o por WhatsApp.</strong></p>
     </div>
-    <footer>&copy; 2025 En Tres Dimensiones</footer>
   </div>
+
   <footer>
-      &copy; 2025 En tres Dimensiones. Todos los derechos reservados.
-    </footer>
-</div>
+    &copy; 2025 En Tres Dimensiones. Todos los derechos reservados.
+  </footer>
+
 </body>
-</html> 
+</html>
